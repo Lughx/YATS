@@ -3,7 +3,7 @@ import { Header } from './components/Header';
 import { Projects } from './components/Projects';
 import { Technologies } from './components/Technologies';
 
-function App() {
+function HomePage() {
   return (
     <div className="min-h-screen">
       <Header />
@@ -15,4 +15,4 @@ function App() {
   );
 }
 
-export default App;
+export default HomePage;
