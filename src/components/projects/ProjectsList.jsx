@@ -7,7 +7,7 @@ export function ProjectList() {
             title: "Paladinslx",
             date: "Enero 2024",
             imageUrl: "/projects/paladinslx.jpg",
-            description: "Paladinslx es una plataforma que te permite ver las estadisticas de los jugadores del videojuego llamado paladins",
+            description: "Paladinslx es una plataforma que facilita el acceso a las estadísticas de los jugadores del videojuego Paladins",
             buttons: {
                 github: {
                     link: "https://github.com/Luughx/Paladinslx-frontend"
