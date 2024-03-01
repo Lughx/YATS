@@ -10,7 +10,7 @@ export function Header() {
                         Soy <span className="font-bold text-blue-600">Yahir Tapia</span>
                     </div>
                     <div className="flex justify-center items-center">
-                        <div className="w-2/3 md:w-1/2 my-2 text-lg text-center">
+                        <div className="w-2/3 my-2 text-lg text-center">
                             <p>
                                 Estudiante apasionado por la tecnología, siempre dispuesto a
                                 desarrollar nuevas habilidades
