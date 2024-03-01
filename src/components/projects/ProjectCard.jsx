@@ -5,11 +5,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export function ProjectCard({ project }) {
     return (
         <div /* onMouseEnter={() => setCurrentProject(expand)} */ className="p-4 rounded-xl mb-3 backdrop-blur-lg">
-            <div className="grid gap-5 grid-cols-3">
+            <div className="grid gap-5 grid-cols-1 md:grid-cols-3">
                 <div className="col-span-1 rounded-xl w-full h-full overflow-hidden">
                     <img className=" rounded-xl w-full h-full object-cover img-project" src={project.imageUrl} alt={project.title} />
                 </div>
-                <div className="col-span-2">
+                <div className="col-span-1 md:col-span-2">
                     <div className="font-semibold text-lg">
                         {project.title} <span className="text-xs text-slate-600">{project.date}</span>
                     </div>
