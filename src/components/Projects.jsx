@@ -4,7 +4,7 @@ export function Projects() {
     return (
         <div className="mt-4">
             <div className="text-center font-semibold text-xl mb-3">
-                Proyectos
+                Projects
             </div>
             <div>
                 <ProjectList />

@@ -9,7 +9,7 @@ export function ProjectCard({ project }) {
                 <div class="flex items-center space-x-4 md:space-x-2 md:space-x-reverse">
                     <div class="flex items-center justify-center w-8 h-8 rounded-full bg-slate-500 shadow md:order-1">
                     </div>
-                    <time class="font-caveat font-medium text-xl text-indigo-500 md:w-28">{project.date}</time>
+                    <time class="font-caveat font-medium text-xl text-primary-1 md:w-28">{project.date}</time>
                 </div>
                 <div class=" p-4 rounded shadow ml-14 md:ml-44 grid gap-5 grid-cols-1 md:grid-cols-3">
                     <div className="col-span-1 rounded-xl w-full h-full overflow-hidden">

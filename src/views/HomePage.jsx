@@ -4,6 +4,8 @@ import { Projects } from '../components/Projects';
 import { Navbar } from '../components/Navbar';
 import { AboutMe } from '../components/home/AboutMe';
 import { Contact } from '../components/home/Contact';
+import { Technologies } from '../components/home/Technologies';
+import { Certificates } from '../components/home/Certificates';
 
 function HomePage() {
   return (
@@ -15,6 +17,10 @@ function HomePage() {
         <div className="mt-3">
           <AboutMe />
         </div>
+        <div className='mt-3'>
+          <Technologies />
+        </div>
+          {/* <Certificates /> */}
         <div className="mt-3" id="projects">
           <Projects />
         </div>

@@ -4,9 +4,9 @@ import { ProjectCard } from "./ProjectCard";
 export function ProjectList() {
     const projects = [
         {
-            labels: ["Web"],
+            labels: ["backend"],
             title: "The laundry basket Scanner",
-            date: "March 2024",
+            date: "August 2025",
             imageUrl: "/projects/portafolio.png",
             description: "A simple code to scan barcodes and send an HTTP request to a server",
             buttons: {
@@ -23,7 +23,7 @@ export function ProjectList() {
             ],
         },
         {
-            labels: ["Web"],
+            labels: ["web", "frontend"],
             title: "YATS",
             date: "March 2024",
             imageUrl: "/projects/portafolio.png",
@@ -50,7 +50,7 @@ export function ProjectList() {
             ],
         },
         {
-            labels: ["Web"],
+            labels: ["web", "frontend", "backend"],
             title: "Paladinslx",
             date: "January 2024",
             imageUrl: "/projects/paladinslx.jpg",
@@ -92,7 +92,7 @@ export function ProjectList() {
             ],
         },
         {
-            labels: ["simulator"],
+            labels: ["simulator", "school"],
             title: "F1 Simulator",
             date: "Dicember 2023",
             imageUrl: "/projects/game f1.jpg",
@@ -116,7 +116,7 @@ export function ProjectList() {
             ],
         },
         {
-            labels: ["web"],
+            labels: ["web", "frontend"],
             title: "Alphabet",
             date: "November 2023",
             imageUrl: "/projects/alphabet.webp",
@@ -144,7 +144,7 @@ export function ProjectList() {
             ],
         },
         {
-            labels: ["simulator"],
+            labels: ["simulator", "school"],
             title: "Volcano Simulator",
             date: "Octuber 2023",
             imageUrl: "/projects/volcan.jpeg",
@@ -168,7 +168,7 @@ export function ProjectList() {
             ],
         },
         {
-            labels: ["simulator"],
+            labels: ["game", "school"],
             title: "Syllogistic",
             date: "Octuber 2023",
             imageUrl: "/projects/syllogistic.jpg",
@@ -194,7 +194,7 @@ export function ProjectList() {
             ],
         },
         {
-            labels: ["Web"],
+            labels: ["web", "frontend", "backend"],
             title: "Prepa 2030",
             date: "March 2023",
             imageUrl: "/projects/prepa2030.avif",
@@ -233,7 +233,7 @@ export function ProjectList() {
             ],
         },
         {
-            labels: ["Unity"],
+            labels: ["game"],
             title: "Videojuego 2D en Unity",
             date: "February 2023",
             imageUrl: "/projects/game.jpg",
@@ -264,44 +264,78 @@ export function ProjectList() {
         {
             name: "web",
             active: false
+        },
+        {
+            name: "backend",
+            active: false
+        },
+        {
+            name: "frontend",
+            active: false
+        },
+        {
+            name: "game",
+            active: false
+        },
+        {
+            name: "school",
+            active: false
         }
     ])
 
     function onClickTag(t) {
-        console.log(t)
-        let VProjects = visibleProjects
         let VTags = visibleTags
         let Tags = tags
-        if (t.active) {
 
-            //const indexTags = tags.findIndex(tag => tag.name === t.name)
-            const indexVisible = tags.findIndex(tag => tag.name === t.name)
-            if (indexVisible !== -1) {
-                //const deleted = tags.splice(indexTags, 1);
-                console.log("deleted")
-                //setTags(deleted)
+        const indexVisible = VTags.findIndex(tag => tag.name === t.name)
+
+        if (indexVisible == -1) return
+
+
+        let newTag = {
+            name: t.name,
+            active: t.active ? false : true
+        }
+
+        let newTags
+
+        if (t.active) {
+            const indexTags = Tags.findIndex(tag => tag === t.name)
+            if (indexTags !== -1) {
+                newTags = Tags.filter(tag => tag !== t.name);
             }
 
         } else {
+            if (t.name) {
+                Tags.push(t.name)
+                newTags = Tags
 
-            Tags.push(t)
-
+            }
         }
 
+        setTags(newTags)
+        VTags[indexVisible] = { ...VTags[indexVisible], ...newTag }
+        setVisibleTags([...VTags])
+
+        let newVisibleProjects
+        if (newTags.length === 0) newVisibleProjects = projects 
+        else newVisibleProjects = projects.filter(project => project.labels.some(element => newTags.includes(element)))
+
+        setVisibleProjects([...newVisibleProjects])
     }
 
     return (
         <div>
-            <div className="flex flex-inline justify-center">
+            <div className="flex flex-inline justify-center mt-5 mb-3">
                 {visibleTags.map((t, i) => (
-                    <div onClick={() => onClickTag(t)} className={`${t.class} px-3 py-1 ml-4 rounded-full cursor-pointer`}>
+                    <div onClick={() => onClickTag(t)} className={`${t.active ? "bg-primary-2 border border-primary-2" : "hover:border hover:border-primary-2 hover:bg-primary-2 bg-slate-700"} first-letter:uppercase px-3 py-1 ml-4 rounded-full cursor-pointer`}>
                         {t.name}
                     </div>
                 ))}
             </div>
             <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:ml-[8.75rem] md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
 
-                {projects.map((project, i) => (
+                {visibleProjects.map((project, i) => (
                     <ProjectCard
                         project={project}
                         key={i}

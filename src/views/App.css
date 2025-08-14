@@ -10,3 +10,19 @@ body {
 .img-project:hover {
     transform: scale(1.05);
 }
+
+.bg-primary-1 {
+    background: #22e6ab;
+}
+
+.bg-primary-2 {
+    background: #17ad80;
+}
+
+.border-primary-2 {
+    border-color: #17ad80;
+}
+
+.text-primary-1 {
+    color: #22e6ab;
+}
