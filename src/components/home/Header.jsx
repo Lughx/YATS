@@ -1,19 +1,19 @@
 import { faFacebook, faGithub, faInstagram, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Technologies } from "./Technologies";
 
 export function Header() {
     return (
         <div id="home">
-            <div className="h-[500px] p-4 flex justify-center items-center">
+            <div className="h-[400px] p-4 flex justify-center items-center">
                 <div>
                     <div className="mt-4 text-3xl font-md"> {/* mx-auto */}
-                        Soy <span className="font-bold text-primary-1">Yahir Tapia</span>
+                        I'm <span className="font-bold text-primary-1">Yahir Tapia</span>
                     </div>
                     <div className="">
                         <div className="w-2/3 my-2 text-lg">
                             <p>
-                                Estudiante apasionado por la tecnología, siempre dispuesto a
-                                desarrollar nuevas habilidades
+                                Student passionate about technology, always willing to develop new skills
                             </p>
                         </div>
                     </div>
@@ -25,6 +25,9 @@ export function Header() {
                             <FontAwesomeIcon icon={faGithub} />
                         </a>
                     </div>
+                    {/* <div className="w-2/3">
+                        <Technologies/>
+                    </div> */}
                 </div>
             </div>
         </div>

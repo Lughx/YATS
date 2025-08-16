@@ -6,6 +6,7 @@ import { AboutMe } from '../components/home/AboutMe';
 import { Contact } from '../components/home/Contact';
 import { Technologies } from '../components/home/Technologies';
 import { Certificates } from '../components/home/Certificates';
+import { Experiencie } from '../components/home/Experience';
 
 function HomePage() {
   return (
@@ -15,10 +16,17 @@ function HomePage() {
       <Header />
       <div className="container max-w-4xl w-full mx-auto grid gap-4 grid-cols-1">
         <div className="mt-3">
-          <AboutMe />
+          {/* <AboutMe /> */}
         </div>
-        <div className='mt-3'>
+        <hr className='border-slate-700' />
+        <div className=''>
           <Technologies />
+        </div>
+        <br />
+        <hr className='border-slate-700' />
+        <br />
+        <div className='mt-5'>
+          <Experiencie />
         </div>
           {/* <Certificates /> */}
         <div className="mt-3" id="projects">
