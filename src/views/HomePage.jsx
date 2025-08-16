@@ -2,10 +2,8 @@ import './App.css';
 import { Header } from '../components/home/Header';
 import { Projects } from '../components/Projects';
 import { Navbar } from '../components/Navbar';
-import { AboutMe } from '../components/home/AboutMe';
 import { Contact } from '../components/home/Contact';
 import { Technologies } from '../components/home/Technologies';
-import { Certificates } from '../components/home/Certificates';
 import { Experiencie } from '../components/home/Experience';
 
 function HomePage() {
