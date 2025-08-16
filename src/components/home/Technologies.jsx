@@ -65,7 +65,7 @@ export function Technologies() {
     return (
 
         <div className="mb-6">
-            <div className="text-center text-xl font-semibold" id="technologies">
+            <div className="text-center text-xl font-semibold">
                 Technologies
             </div>
             <div className="flex flex-wrap justify-center mt-5 mb-3">

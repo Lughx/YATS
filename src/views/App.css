@@ -29,3 +29,11 @@ body {
 .text-primary-1 {
     color: #22e6ab;
 }
+
+.hover-text-primary-1:hover {
+    color: #22e6ab;
+}
+
+.hover-text-primary-2:hover {
+    color: #17ad80;
+}

@@ -5,19 +5,19 @@ export function Navbar() {
                 <div className="w-full flex justify-center">
                     <ul className="font-medium flex p-0 mt-4 rounded-lg flex-row space-x-8 rtl:space-x-reverse mt-0 border-0">
                         <li>
-                            <a href="#home" className="text-white rounded hover:text-blue-700 p-0">Home</a>
+                            <a href="#home" className="text-white rounded hover-text-primary-1 p-0">Home</a>
                         </li>
                         <li>
-                            <a href="#technologies" className="text-white rounded hover:text-blue-700 p-0">Technologies</a>
+                            <a href="#technologies" className="text-white rounded hover-text-primary-1 p-0">Technologies</a>
                         </li>
                         <li>
-                            <a href="#experiences" className="text-white rounded hover:text-blue-700 p-0">Experiences</a>
+                            <a href="#experiences" className="text-white rounded hover-text-primary-1 p-0">Experiences</a>
                         </li>
                         <li>
-                            <a href="#projects" className="text-white rounded hover:text-blue-700 p-0">Projects</a>
+                            <a href="#projects" className="text-white rounded hover-text-primary-1 p-0">Projects</a>
                         </li>
                         <li>
-                            <a href="#contact" className="text-white rounded hover:text-blue-700 p-0">Contact</a>
+                            <a href="#contact" className="text-white rounded hover-text-primary-1 p-0">Contact</a>
                         </li>
                     </ul>
                 </div>
