@@ -17,10 +17,10 @@ export function Header() {
                         </div>
                     </div>
                     <div className="mt-3 text-xl">
-                        <a className="hover:text-blue-700 mr-5" href="https://www.linkedin.com/in/yahir-t-966108291/" target="_blank" rel="noreferrer">
+                        <a className="hover-text-primary-1 mr-5" href="https://www.linkedin.com/in/yahir-t-966108291/" target="_blank" rel="noreferrer">
                             <FontAwesomeIcon icon={faLinkedinIn} />
                         </a>
-                        <a className="hover:text-blue-700 mr-5" href="https://github.com/Lughx" target="_blank" rel="noreferrer">
+                        <a className="hover-text-primary-1 mr-5" href="https://github.com/Lughx" target="_blank" rel="noreferrer">
                             <FontAwesomeIcon icon={faGithub} />
                         </a>
                     </div>
