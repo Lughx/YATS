@@ -4,11 +4,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export function Experiencie() {
     return (
         <div >
+            <div className="text-center text-xl font-semibold">
+                Experience
+            </div>
             <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:ml-[8.75rem] md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-green-300 before:to-transparent">
                 <div class="relative">
                     <div class="md:flex items-center md:space-x-4 mb-3">
                         <div class="flex items-center space-x-4 md:space-x-2 md:space-x-reverse">
-                            <div class="flex items-center justify-center w-8 h-8 rounded-full bg-primary-2 shadow md:order-1">
+                            <div class="flex items-center justify-center w-8 h-8 rounded-full bg-primary-2 shadow md:order-1 ml-1">
                             </div>
                             <time class="font-caveat font-medium text-xl text-primary-1 md:w-28">January 2024 <br />- <br /> June 2024</time>
                         </div>

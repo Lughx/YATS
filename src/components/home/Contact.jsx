@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export function Contact() {
     return (
         <div>
-            <div className="mt-4 mb-4">
+            <div className="mt-4 mb-4 text-primary-1">
                 <div className="text-lg flex justify-center items-center">
                     <div>
                         <span className="mr-2">

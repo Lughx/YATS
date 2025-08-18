@@ -7,7 +7,7 @@ export function ProjectCard({ project }) {
         <div class="relative">
             <div class="md:flex items-center md:space-x-4 mb-3">
                 <div class="flex items-center space-x-4 md:space-x-2 md:space-x-reverse">
-                    <div class="flex items-center justify-center w-8 h-8 rounded-full bg-primary-2 shadow md:order-1">
+                    <div class="flex items-center justify-center w-8 h-8 rounded-full bg-primary-2 shadow md:order-1 ml-1">
                     </div>
                     <time class="font-caveat font-medium text-xl text-primary-1 md:w-28">{project.date}</time>
                 </div>
